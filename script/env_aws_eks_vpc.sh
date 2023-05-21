@@ -1,6 +1,6 @@
 #!/bin/bash
 # command ./env_aws_eks_vpc.sh stack_name
-# eks version 1.27
+# eks version 1.26
 stack_name=$1
 echo stack_name: $stack_name
 
@@ -31,7 +31,7 @@ echo "export PrivateSubnet03=${PrivateSubnet03}" | tee -a ~/.bash_profile
 
 # Create eks cluster environment 
 export ekscluster_name=$stack_name
-export eks_version="1.27"
+export eks_version="1.26"
 export instance_type="m5.xlarge"
 export public_selfmgmd_node="frontend-workloads"
 export private_selfmgmd_node="backend-workloads"
